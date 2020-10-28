@@ -6,4 +6,4 @@ Analysis, Comparisons and Construction of Learning Rules to Hopfield-Type Neural
 Here we implemente the Correlation, Projection and Storkey learning rules.
 
 
-- **Fidelis Zanatti and Rodolfo Anibal Lobo** - Federal Institute of Education, Science and Technology of Espírito Santo and University of Campinas
+- **Fidelis Zanatti and Rodolfo Anibal Lobo** - *Federal Institute of Education, Science and Technology of Espírito Santo and University of Campinas*
