@@ -13,4 +13,4 @@ For the complex case we explore two models, using *splitsign* and *csign* activa
 # Usage
 
 
-- **Fidelis Zanatti and Rodolfo Anibal Lobo** - *Federal Institute of Education, Science and Technology of Espírito Santo and University of Campinas*
+- **Fidelis Zanatti and Rodolfo Anibal Lobo** - *Federal Institute of Education, Science and Technology of Espírito Santo and University of Campinas, Brazil 2020.*
