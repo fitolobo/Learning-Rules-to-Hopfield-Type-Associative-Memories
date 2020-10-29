@@ -17,7 +17,7 @@ The main method for Storkey learning rules can be called in real case by
     W2 = RealStorkey.storkey_learning(U,ComplexStorkey.second)
 ```
 where the instruction ```first``` is the first order method and ```second``` the second order method. 
-and,in the complex case by
+In the complex case by
 
  ```julia
     W1 = ComplexStorkey.storkey_learning(U,ComplexStorkey.first)
