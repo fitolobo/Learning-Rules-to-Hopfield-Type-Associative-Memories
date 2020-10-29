@@ -168,63 +168,6 @@ function local_field_opt(W_old,U,i,j,row)
     
 end
 
-##########################################################################
-### Algoritmo (5.9) Tese de Amos Storkey
-##########################################################################
-
-
-function deep_loop(U,C,i,j,row,col)
-
-    s = 0.0 
-    
- @inbounds @simd   for mu = 1:col
-
-        for v = 1:col
-
-        s += U[i,mu]*C[mu,v]*U[j,v]
-
-        end
-
-    end
-    
-
-    return s
-    
-end
-    
-
-
-function second_term(U,row,col)
-
-    C = (1/row)*U'*U
-    
-    St = zeros(row,row)
-    
- @inbounds @simd   for i=1:row
-
-        for j=1:row
-
-            St[i,j] = deep_loop(U,C,i,j,row,col)
-            
-        end
-
-    end
-    
-    return C, St
-    
-end
-    
-
-function storkey_59(U)
-
-    row,col = size(U)
-
-    C, St = second_term(U,row,col)
-
-    W =  (2/row)*U*U'
-
-    return W-(1/row)*St  
-end
 
 ##########################################################################
 ### Asynchronous Hopfield Neural Network
