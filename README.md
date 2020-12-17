@@ -10,8 +10,7 @@ This repository contain the Julia source-codes of Hopfield-Type learning rules o
 In particular, we implemented the Correlation, Projection and Storkey learning rules, applying the Hopfield neural network as an associative memory storing synthetic patterns. For the complex case we explore two models, using *splitsign* and *csign* activation functions. 
 
 # Usage
-
-The main method for Storkey learning rules can be called in real case by
+The main module of incremental learning in real and complex case is called ```ILearning.jl```. The main method for Storkey learning rules can be called in real case by
 ```julia
     W1 = ILearning.train(ILearning.first,U,nothing)
     W2 = ILearning.train(ILearning.second,U,nothing)
