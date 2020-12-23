@@ -15,7 +15,7 @@ The main module of incremental learning in real and complex case is called ```IL
     W1 = Storkey1(U,nothing)
     W2 = Storkey2(U,nothing)
 ```
-where the instruction ```first``` is the first order method and ```second``` the second order method. The third argument let us intialize with a non null matrix previously stored, for example:
+where the function ```Storkey1``` is the first order method and ```Storkey2``` the second order method. The third argument let us intialize with a non null matrix previously stored, for example:
 ```julia
     ### Create a boolean random matrix
     N = 200;
@@ -38,13 +38,13 @@ Analogously in the complex case, we have the storkey learning rules
     W1 = Storkey1(U,nothing)
     W2 = Storkey2(U,nothing)
  ```
- where the arguments ``` first ``` and ``` second ``` are analogous to the real functions, and the third argument let us intialize with a non null matrix previously stored using the same storage rule. The projection and correlation rules, in both cases are called by
+ where the functions ``` Storkey1 ``` and ``` Storkey2``` are the complex version of these learning rules, and the third argument let us intialize with a non null matrix previously stored using the same storage rule. The projection and correlation rules, in both cases are called by
  
   ```julia
     Wc = ILearning.Correlation(U,nothing);
-    Wp = ILearning.Projection(U)
+    Wp = ILearning.Projection(U, Win, Ain)
  ```
- In this case, the correlation rule also permits initialize with a non null matrix previously stored using the same storage rule. 
+ In this case, the correlation and projection rules also permits initialize with a non null matrix.
 
  The stored patterns have components in the binary set <img src="https://render.githubusercontent.com/render/math?math=%5C%7B%2B1%2C-1%5C%7D"> for real case. In the complex case you need to set the *resolution factor* <img src="https://render.githubusercontent.com/render/math?math=K"> in order to define the possible states for the neurons. In real case is obtained <img src="https://render.githubusercontent.com/render/math?math=W%20%5Cin%20%5Cmathbb%7BR%7D%5E%7BN%5Ctimes%20N%7D">, and in the complex case <img src="https://render.githubusercontent.com/render/math?math=W%20%5Cin%20%5Cmathbb%7BC%7D%5E%7BN%5Ctimes%20N%7D"> both matrices symmetric and with zero diagonal terms. 
 
