@@ -12,8 +12,8 @@ In particular, we implemented the Correlation, Projection and Storkey learning r
 # Usage
 The main module of incremental learning in real and complex case is called ```ILearning.jl```. The main method for Storkey learning rules can be called in real case by
 ```julia
-    W1 = ILearning.train(ILearning.first,U,nothing)
-    W2 = ILearning.train(ILearning.second,U,nothing)
+    W1 = Storkey1(U,nothing)
+    W2 = Storkey2(U,nothing)
 ```
 where the instruction ```first``` is the first order method and ```second``` the second order method. The third argument let us intialize with a non null matrix previously stored, for example:
 ```julia
@@ -23,20 +23,20 @@ where the instruction ```first``` is the first order method and ```second``` the
     U1 = 2*rand(rng,Bool,(N,P1)).-1;
     
     ### Storing U1 using first order storkey rule (initializing Win = 0)
-    W = ILearning.train(ILearning.first,U1,nothing);
+    W = Storkey1(U1,nothing);
     
     ### Create other boolean random matrix
     P2 = 10
     U2 = 2*rand(rng,Bool,(N,P2)).-1;
     
     ### Storing U2 using first order storkey rule (initializing Win = W) 
-    W1 = ILearning.train(ILearning.first,U2,W);
+    W1 = Storkey2(U2,W);
 ```
 Analogously in the complex case, we have the storkey learning rules
 
  ```julia
-    W1 = ILearning.train(ILearning.first,U,nothing)
-    W2 = ILearning.train(ILearning.second,U,nothing)
+    W1 = Storkey1(U,nothing)
+    W2 = Storkey2(U,nothing)
  ```
  where the arguments ``` first ``` and ``` second ``` are analogous to the real functions, and the third argument let us intialize with a non null matrix previously stored using the same storage rule. The projection and correlation rules, in both cases are called by
  
