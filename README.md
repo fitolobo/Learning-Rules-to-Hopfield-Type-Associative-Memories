@@ -44,7 +44,7 @@ Analogously in the complex case, we have the storkey learning rules
     Wc = ILearning.Correlation(U,nothing);
     Wp = ILearning.Projection(U, Win, Ain)
  ```
- In this case, the correlation and projection rules also permits initialize with a non null matrix.
+ In this case, the correlation and projection rules could also be initialized with a non null matrix.
 
  The stored patterns have components in the binary set <img src="https://render.githubusercontent.com/render/math?math=%5C%7B%2B1%2C-1%5C%7D"> for real case. In the complex case you need to set the *resolution factor* <img src="https://render.githubusercontent.com/render/math?math=K"> in order to define the possible states for the neurons. In real case is obtained <img src="https://render.githubusercontent.com/render/math?math=W%20%5Cin%20%5Cmathbb%7BR%7D%5E%7BN%5Ctimes%20N%7D">, and in the complex case <img src="https://render.githubusercontent.com/render/math?math=W%20%5Cin%20%5Cmathbb%7BC%7D%5E%7BN%5Ctimes%20N%7D"> both matrices symmetric and with zero diagonal terms. 
 
