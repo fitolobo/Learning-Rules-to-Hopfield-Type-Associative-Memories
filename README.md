@@ -1,11 +1,11 @@
-# Learning-Rules-to-Hopfield-Type-Associative-Memories
+# Incremental-Learning-Rules-to-Hopfield-Type-Associative-Memories
 
 
 Analysis, Comparisons and Construction of Learning Rules to Hopfield-Type Neural Networks in real and complex number systems. 
 
 # Getting Started
 
-This repository contain the Julia source-codes of Hopfield-Type learning rules on real and complex number systems. As described in the work "Learning Rules to Hopfield-Type Associative Memories in Real and Complex Domains" by Fidelis Zanetti, Rodolfo Anibal Lobo and Marcos Eduardo Valle. The Jupyter-notebook of the computational experimens are also available in this repository.
+This repository contain the Julia source-codes of Hopfield-Type learning rules on real and complex number systems. As described in the work "Incremental Learning Rules to Hopfield-Type Associative Memories in Real and Complex Domains" by Fidelis Zanetti, Rodolfo Anibal Lobo and Marcos Eduardo Valle. The Jupyter-notebook of the computational experimens are also available in this repository.
 
 In particular, we implemented the Correlation, Projection and Storkey learning rules, applying the Hopfield neural network as an associative memory storing synthetic patterns. For the complex case we explore two models, using *splitsign* and *csign* activation functions. 
 
